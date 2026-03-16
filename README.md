@@ -64,6 +64,23 @@ Why probe is recommended:
 - Better error visibility
 - RTT/defmt logging support
 
+`cargo blinky` is an alias for:
+
+```bash
+cargo run --release --target thumbv6m-none-eabi --no-default-features --features pico1
+```
+
+`cargo blinky-2` is an alias for:
+
+```bash
+cargo run --release --target thumbv8m.main-none-eabihf --no-default-features --features pico2
+```
+
+The runner settings in `.cargo/config.toml` handle flashing and running through `probe-rs`:
+
+- Pico 1 (`thumbv6m-none-eabi`): `probe-rs run --chip=RP2040`
+- Pico 2 (`thumbv8m.main-none-eabihf`): `probe-rs run --chip=RP235x`
+
 ## Run Without a Debug Probe
 
 You can build and flash via the BOOTSEL button and drag/drop UF2.
@@ -89,3 +106,12 @@ Then for either board:
 3. Copy the matching `.uf2` file to that drive.
 
 Without a probe, flashing works, but you will not see runtime log output or be able to debug while the program runs, so we strongly recommend using a debug probe.
+
+## License
+
+Licensed under either:
+
+- MIT license
+- Apache License, Version 2.0
+
+at your option.
