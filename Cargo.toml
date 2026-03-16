@@ -1,0 +1,28 @@
+[package]
+name = "device-envoy-rp-blinky"
+version = "0.0.5-alpha.0"
+edition = "2024"
+
+[features]
+default = ["pico2"]
+pico1 = ["device-envoy-rp/pico1"]
+pico2 = ["device-envoy-rp/pico2"]
+
+[dependencies]
+device-envoy-rp = { path = "../device-envoy/crates/device-envoy-rp", default-features = false, features = ["arm"] }
+embassy-executor = { version = "0.9.1", default-features = false, features = ["executor-thread", "arch-cortex-m"] }
+embassy-rp = { version = "0.9.0", default-features = false, features = ["rt", "defmt", "time-driver", "critical-section-impl"] }
+embassy-time = { version = "0.5.0", features = ["defmt", "defmt-timestamp-uptime"] }
+defmt = "0.3.10"
+defmt-rtt = "1.1.0"
+panic-probe = { version = "1.0.0", features = ["print-defmt"] }
+cortex-m-rt = "0.7.5"
+heapless = "0.8.0"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+panic = "abort"
