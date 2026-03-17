@@ -35,9 +35,7 @@ rustup target add thumbv8m.main-none-eabihf
 ```
 
 * For debug probe workflow: [`probe-rs`](https://probe.rs/) (recommended, directions on website)
-* For no-probe flashing workflow: [`elf2uf2-rs`](https://github.com/JoNil/elf2uf2-rs)
-
-Install `elf2uf2-rs`:
+* For no-probe flashing workflow: [`elf2uf2-rs`](https://github.com/JoNil/elf2uf2-rs), install `elf2uf2-rs`:
 
 ```bash
 cargo install elf2uf2-rs
