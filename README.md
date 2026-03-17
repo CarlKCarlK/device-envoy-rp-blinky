@@ -77,13 +77,13 @@ Why probe is recommended:
 - Better error visibility
 - RTT/defmt logging support
 
-`cargo blinky` is an alias for:
+Behind the scenes, `cargo blinky` is an alias for:
 
 ```bash
 cargo run --release --target thumbv6m-none-eabi --no-default-features --features pico1
 ```
 
-`cargo blinky-2` is an alias for:
+Behind the scenes, `cargo blinky-2` is an alias for:
 
 ```bash
 cargo run --release --target thumbv8m.main-none-eabihf --no-default-features --features pico2
