@@ -1,6 +1,6 @@
 [package]
 name = "device-envoy-rp-blinky"
-version = "0.0.5-alpha.3"
+version = "0.0.5-alpha.4"
 edition = "2024"
 
 [features]
@@ -9,7 +9,7 @@ pico1 = ["device-envoy-rp/pico1"]
 pico2 = ["device-envoy-rp/pico2"]
 
 [dependencies]
-device-envoy-rp = { version = "0.0.5-alpha.3", default-features = false, features = ["arm"] }
+device-envoy-rp = { version = "0.0.5-alpha.4", default-features = false, features = ["arm"] }
 embassy-executor = { version = "0.9.1", default-features = false, features = ["executor-thread", "arch-cortex-m"] }
 embassy-rp = { version = "0.9.0", default-features = false, features = ["rt", "defmt", "time-driver", "critical-section-impl"] }
 embassy-time = { version = "0.5.0", features = ["defmt", "defmt-timestamp-uptime"] }
