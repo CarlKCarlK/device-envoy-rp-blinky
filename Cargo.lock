@@ -365,7 +365,7 @@ dependencies = [
 
 [[package]]
 name = "device-envoy-rp"
-version = "0.0.5-alpha.2"
+version = "0.0.5-alpha.3"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",
@@ -402,7 +402,7 @@ dependencies = [
 
 [[package]]
 name = "device-envoy-rp-blinky"
-version = "0.0.5-alpha.2"
+version = "0.0.5-alpha.3"
 dependencies = [
  "cortex-m-rt",
  "defmt 0.3.100",
