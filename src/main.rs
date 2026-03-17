@@ -46,8 +46,15 @@ const SOS_PATTERN: [(LedLevel, Duration); 18] = [
     (LedLevel::Off, WORD_GAP_DURATION),
 ];
 
+#[cfg(feature = "wifi")]
 led!(LedBlinky {
     pin: PIN_1,
+    max_steps: 32
+});
+
+#[cfg(not(feature = "wifi"))]
+led!(LedBlinky {
+    pin: PIN_25,
     max_steps: 32
 });
 
@@ -61,8 +68,15 @@ async fn inner_main(spawner: Spawner) -> Result<Infallible> {
     info!("device-envoy-rp-blinky boot");
     let p = embassy_rp::init(Default::default());
 
+    #[cfg(feature = "wifi")]
     let led_blinky = LedBlinky::new(p.PIN_1, OnLevel::High, spawner)?;
+    #[cfg(not(feature = "wifi"))]
+    let led_blinky = LedBlinky::new(p.PIN_25, OnLevel::High, spawner)?;
+
+    #[cfg(feature = "wifi")]
     info!("LED ready on PIN_1");
+    #[cfg(not(feature = "wifi"))]
+    info!("LED ready on internal PIN_25");
 
     led_blinky.animate(SOS_PATTERN);
     info!("SOS animation started");

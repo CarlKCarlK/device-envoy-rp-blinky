@@ -4,9 +4,10 @@ version = "0.0.5-alpha.4"
 edition = "2024"
 
 [features]
-default = ["pico2"]
+default = ["pico1"]
 pico1 = ["device-envoy-rp/pico1"]
 pico2 = ["device-envoy-rp/pico2"]
+wifi = ["device-envoy-rp/wifi"]
 
 [dependencies]
 device-envoy-rp = { version = "0.0.5-alpha.4", default-features = false, features = ["arm"] }
