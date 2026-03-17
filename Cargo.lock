@@ -342,7 +342,7 @@ dependencies = [
 
 [[package]]
 name = "device-envoy-core"
-version = "0.0.5-alpha.0"
+version = "0.0.5-alpha.2"
 dependencies = [
  "crc32fast",
  "critical-section",
@@ -365,7 +365,7 @@ dependencies = [
 
 [[package]]
 name = "device-envoy-rp"
-version = "0.0.5-alpha.1"
+version = "0.0.5-alpha.2"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",
@@ -402,7 +402,7 @@ dependencies = [
 
 [[package]]
 name = "device-envoy-rp-blinky"
-version = "0.0.5-alpha.0"
+version = "0.0.5-alpha.2"
 dependencies = [
  "cortex-m-rt",
  "defmt 0.3.100",
