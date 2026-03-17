@@ -1,10 +1,23 @@
 # device-envoy-rp-blinky
 
-A minimal LED blinky app built with [`device-envoy-rp`](https://github.com/CarlKCarlK/device-envoy/tree/main/crates/device-envoy-rp) for Raspberry Pi Pico 1 and Pico 2.
+[![GitHub](https://img.shields.io/badge/github-device--envoy--rp--blinky-8da0cb?style=flat&labelColor=555555&logo=github)](https://github.com/CarlKCarlK/device-envoy-rp-blinky)
+[![crates.io](https://img.shields.io/crates/v/device-envoy-rp?style=flat&color=fc8d62&logo=rust)](https://crates.io/crates/device-envoy-rp)
 
-This project blinks SOS on an external LED connected to `PIN_1`.
+[`device-envoy-rp`](https://crates.io/crates/device-envoy-rp) is a Rust crate for building Raspberry Pi Pico 1 and Pico 2 applications with LED panels, easy WiFi, and composable device abstractions.
 
-Tip: If you are using a non-W Pico board and want to use the onboard LED, you can skip external wiring.
+This repository is a minimal blinky example that uses [`device-envoy-rp`](https://crates.io/crates/device-envoy-rp) with an external LED connected to `PIN_1`.
+
+To use this as the start of your own project:
+
+```bash
+git clone https://github.com/CarlKCarlK/device-envoy-rp-blinky.git
+cd device-envoy-rp-blinky
+git remote remove origin
+```
+
+It blinks SOS on that LED.
+
+> Tip: If you are using a non-W Pico board and want to use the onboard LED, you can skip external wiring.
 Just edit `src/main.rs` and change `p.PIN_1` to `p.PIN_25` (non-W boards only).
 
 ## Wiring
@@ -111,7 +124,7 @@ Without a probe, flashing works, but you will not see runtime log output or be a
 
 Licensed under either:
 
-- MIT license
-- Apache License, Version 2.0
+- MIT license (see LICENSE-MIT)
+- Apache License, Version 2.0 (see LICENSE-APACHE)
 
 at your option.
