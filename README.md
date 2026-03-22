@@ -27,6 +27,7 @@ Jump to
 ### Prerequisites (without WiFi)
 
 * Rust installed
+* `just` installed
 * Targets installed:
 
 ```bash
@@ -46,17 +47,19 @@ cargo install elf2uf2-rs
 If you have the debug probe attached:
 
 ```bash
-cargo blinky # pico 1
-cargo blinky-2 # pico 2
+just run # pico 1
+just run blinky # pico 1
+just run 2 # pico 2
+just run blinky 2 # pico 2
 ```
 
-Behind the scenes, `cargo blinky` is an alias for:
+Behind the scenes, `just run` expands to:
 
 ```bash
 cargo run --release --target thumbv6m-none-eabi --no-default-features --features pico1
 ```
 
-Behind the scenes, `cargo blinky-2` is an alias for:
+Behind the scenes, `just run 2` expands to:
 
 ```bash
 cargo run --release --target thumbv8m.main-none-eabihf --no-default-features --features pico2
@@ -68,24 +71,28 @@ The `runner = "probe-rs run --chip=RP235x"` setting in `.cargo/config.toml` hand
 
 ### Extra Commands (without WiFi)
 
-* `cargo blinky-check`
-* `cargo blinky-check-2`
-* `cargo blinky-build`
-* `cargo blinky-build-2`
+* `just check`
+* `just check 2`
+* `just build`
+* `just build 2`
+* `just check blinky`
+* `just check blinky 2`
+* `just build blinky`
+* `just build blinky 2`
 
 **Without a debug probe.**
 
 Pico 1:
 
 ```bash
-cargo blinky-build
+just build
 elf2uf2-rs target/thumbv6m-none-eabi/release/device-envoy-rp-blinky device-envoy-rp-blinky-pico1.uf2
 ```
 
 Pico 2:
 
 ```bash
-cargo blinky-build-2
+just build 2
 elf2uf2-rs target/thumbv8m.main-none-eabihf/release/device-envoy-rp-blinky device-envoy-rp-blinky-pico2.uf2
 ```
 
@@ -100,6 +107,7 @@ Then for either board:
 ### Prerequisites (with WiFi)
 
 * Rust installed
+* `just` installed
 * Targets installed:
 
 ```bash
@@ -130,17 +138,19 @@ Breadboard schematic:
 If you have the debug probe attached:
 
 ```bash
-cargo blinky-w # pico 1 w
-cargo blinky-2w # pico 2 w
+just run w # pico 1 w
+just run blinky w # pico 1 w
+just run 2w # pico 2 w
+just run blinky 2w # pico 2 w
 ```
 
-Behind the scenes, `cargo blinky-w` is an alias for:
+Behind the scenes, `just run w` expands to:
 
 ```bash
 cargo run --release --target thumbv6m-none-eabi --no-default-features --features pico1,wifi
 ```
 
-Behind the scenes, `cargo blinky-2w` is an alias for:
+Behind the scenes, `just run 2w` expands to:
 
 ```bash
 cargo run --release --target thumbv8m.main-none-eabihf --no-default-features --features pico2,wifi
@@ -152,24 +162,28 @@ The `runner = "probe-rs run --chip=RP235x"` setting in `.cargo/config.toml` hand
 
 ### Extra Commands (with WiFi)
 
-* `cargo blinky-w-check`
-* `cargo blinky-2w-check`
-* `cargo blinky-w-build`
-* `cargo blinky-2w-build`
+* `just check w`
+* `just check 2w`
+* `just build w`
+* `just build 2w`
+* `just check blinky w`
+* `just check blinky 2w`
+* `just build blinky w`
+* `just build blinky 2w`
 
 **Without a debug probe.**
 
 Pico 1 W:
 
 ```bash
-cargo blinky-w-build
+just build w
 elf2uf2-rs target/thumbv6m-none-eabi/release/device-envoy-rp-blinky device-envoy-rp-blinky-pico1w.uf2
 ```
 
 Pico 2 W:
 
 ```bash
-cargo blinky-2w-build
+just build 2w
 elf2uf2-rs target/thumbv8m.main-none-eabihf/release/device-envoy-rp-blinky device-envoy-rp-blinky-pico2w.uf2
 ```
 
