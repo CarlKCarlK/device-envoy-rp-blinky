@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../../device-envoy"
+		},
+		{
+			"path": "../../device-envoy-esp-blinky"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"rust-analyzer.check.workspace": false,
+		"rust-analyzer.cargo.allTargets": false,
+		"rust-analyzer.check.allTargets": false,
+		"rust-analyzer.cargo.noDefaultFeatures": true,
+		"rust-analyzer.cargo.features": [
+			"embedded"
+		],
+		"rust-analyzer.cargo.target": "thumbv6m-none-eabi"
+	}
+}
