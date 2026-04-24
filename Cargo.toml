@@ -2,6 +2,13 @@
 name = "device-envoy-rp-blinky"
 version = "0.0.6-alpha.0"
 edition = "2024"
+description = "Minimal blinky starter for Raspberry Pi Pico 1 and Pico 2 using device-envoy-rp"
+keywords = ["embedded", "rp2040", "rp235x", "pico", "blinky"]
+categories = ["embedded", "no-std", "hardware-support"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/CarlKCarlK/device-envoy-rp-blinky"
+documentation = "https://docs.rs/device-envoy-rp"
+homepage = "https://github.com/CarlKCarlK/device-envoy-rp-blinky"
 
 [features]
 default = ["pico1"]
