@@ -1,20 +1,6 @@
 [env]
 DEFMT_LOG = "info"
 
-[alias]
-blinky = "run --release --target thumbv6m-none-eabi --no-default-features --features pico1"
-blinky-check = "check --release --target thumbv6m-none-eabi --no-default-features --features pico1"
-blinky-build = "build --release --target thumbv6m-none-eabi --no-default-features --features pico1"
-blinky-w = "run --release --target thumbv6m-none-eabi --no-default-features --features pico1,wifi"
-blinky-w-check = "check --release --target thumbv6m-none-eabi --no-default-features --features pico1,wifi"
-blinky-w-build = "build --release --target thumbv6m-none-eabi --no-default-features --features pico1,wifi"
-blinky-2 = "run --release --target thumbv8m.main-none-eabihf --no-default-features --features pico2"
-blinky-2-check = "check --release --target thumbv8m.main-none-eabihf --no-default-features --features pico2"
-blinky-2-build = "build --release --target thumbv8m.main-none-eabihf --no-default-features --features pico2"
-blinky-2w = "run --release --target thumbv8m.main-none-eabihf --no-default-features --features pico2,wifi"
-blinky-2w-check = "check --release --target thumbv8m.main-none-eabihf --no-default-features --features pico2,wifi"
-blinky-2w-build = "build --release --target thumbv8m.main-none-eabihf --no-default-features --features pico2,wifi"
-
 [target.thumbv6m-none-eabi]
 runner = "probe-rs run --chip=RP2040"
 rustflags = [
