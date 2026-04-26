@@ -1,6 +1,9 @@
+[workspace]
+members = ["xtask"]
+
 [package]
 name = "device-envoy-rp-blinky"
-version = "0.0.6-alpha.0"
+version = "0.0.6-alpha.1"
 edition = "2024"
 description = "Minimal blinky starter for Raspberry Pi Pico 1 and Pico 2 using device-envoy-rp"
 keywords = ["embedded", "rp2040", "rp235x", "pico", "blinky"]
@@ -17,7 +20,7 @@ pico2 = ["device-envoy-rp/pico2", "embassy-rp/rp235xb"]
 wifi = ["device-envoy-rp/wifi"]
 
 [dependencies]
-device-envoy-rp = { version = "0.0.6-alpha.0", default-features = false, features = ["arm"] }
+device-envoy-rp = { version = "0.0.6-alpha.1", default-features = false, features = ["arm"] }
 embassy-executor = { version = "0.10.0", default-features = false, features = ["executor-thread", "platform-cortex-m"] }
 embassy-rp = { version = "0.10.0", default-features = false, features = ["rt", "defmt", "time-driver", "critical-section-impl"] }
 embassy-time = { version = "0.5.1", features = ["defmt", "defmt-timestamp-uptime"] }

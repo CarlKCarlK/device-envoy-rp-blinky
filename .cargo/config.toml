@@ -27,3 +27,6 @@ rustflags = [
 
 [build]
 target = "thumbv6m-none-eabi"
+
+[alias]
+xtask = "run --manifest-path xtask/Cargo.toml --"
