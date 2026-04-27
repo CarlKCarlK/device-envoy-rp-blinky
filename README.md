@@ -22,10 +22,10 @@ git remote remove origin
 ```
 
 ```bash
-cargo xtask run --board pico1
+cargo xtask run --board BOARD
 ```
 
-Supported boards: `pico1`, `pico2`, `pico1w`, `pico2w`.
+Where BOARD can be: `pico1`, `pico2`, `pico1w`, `pico2w`.
 
 *`xtask run` always adds `--release`. `xtask check` does not.*
 
