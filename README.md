@@ -25,7 +25,7 @@ git remote remove origin
 cargo xtask run --board BOARD
 ```
 
-Where BOARD can be: `pico1`, `pico2`, `pico1w`, `pico2w`.
+where BOARD can be: `pico1`, `pico2`, `pico1w`, `pico2w`.
 
 *`xtask run` always adds `--release`. `xtask check` does not.*
 
