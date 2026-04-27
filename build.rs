@@ -8,7 +8,9 @@ fn main() {
     } else if target.starts_with("thumbv8m") {
         "memory-pico2.x"
     } else {
-        panic!("Unsupported target for linker memory script: {target}");
+        // Non-embedded target (e.g. host target during `cargo publish --dry-run`).
+        // Nothing to do — linker scripts are only needed for ARM targets.
+        return;
     };
 
     let memory_x = fs::read_to_string(memory_file).expect("Failed to read target memory script");
