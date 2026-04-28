@@ -9,6 +9,8 @@ Minimal blinky project using [`device-envoy-rp`](https://crates.io/crates/device
 
 `src/main.rs` is the default quick start. It blinks SOS on the built-in LED, if available. It blinks on an external LED, otherwise.
 
+**Feedback**: If you try this crate, I’d love to hear how it goes, whether it works well, fails to build, needs clearer docs, or does not fit your hardware. Please send feedback to carlk AT msn.com.
+
 ## Prerequisites
 
 Before **Quick Start**, install the toolchain in [Toolchain](#toolchain), then return here.
