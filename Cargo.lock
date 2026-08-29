@@ -551,9 +551,9 @@ dependencies = [
 
 [[package]]
 name = "device-envoy-core"
-version = "0.1.1"
+version = "0.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "aaf053ef6ba610ecc9b568c65a92748da9aaee08dfe43f112394c0ccc9c48858"
+checksum = "080412f407858d8ef47b59275567c6bc95c803ba2fe4375e9d30c592bf2a97b0"
 dependencies = [
  "crc32fast",
  "critical-section",
@@ -579,9 +579,9 @@ dependencies = [
 
 [[package]]
 name = "device-envoy-rp"
-version = "0.1.2"
+version = "0.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7889fde9b9745de6d10651d2b7cf85c9eb944b3b85832a74ba51adae15d962a6"
+checksum = "13a80ce97104e3b53ab75366afca09ca640cbf7568faa68ba1cb1430ea9d75e9"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",
@@ -624,7 +624,7 @@ dependencies = [
 
 [[package]]
 name = "device-envoy-rp-blinky"
-version = "0.1.0"
+version = "0.1.3"
 dependencies = [
  "cortex-m-rt",
  "defmt 0.3.100",
