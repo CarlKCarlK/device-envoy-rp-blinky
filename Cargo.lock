@@ -630,7 +630,6 @@ dependencies = [
  "embassy-executor",
  "embassy-rp",
  "embassy-time",
- "heapless 0.9.2",
  "panic-probe",
 ]
 
