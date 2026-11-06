@@ -164,7 +164,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "211713d2e9fb4793ce4360a712c0764264aff6be48932ccf02ca2a331c0436a9"
 dependencies = [
  "btuuid",
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "embassy-sync",
  "embedded-io 0.7.1",
  "embedded-io-async 0.7.0",
@@ -215,7 +215,7 @@ version = "0.4.44"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c673075a2e0e5f4a1dde27ce9dee1ea4558c7ffe648f576438a20ca1d2acc4b0"
 dependencies = [
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "num-traits",
  "pure-rust-locales",
 ]
@@ -251,7 +251,7 @@ dependencies = [
  "heck",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.117",
 ]
 
 [[package]]
@@ -333,7 +333,7 @@ checksum = "e37549a379a9e0e6e576fd208ee60394ccb8be963889eebba3ffe0980364f472"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.117",
 ]
 
 [[package]]
@@ -395,7 +395,7 @@ dependencies = [
  "bt-hci",
  "cortex-m",
  "cortex-m-rt",
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "embassy-futures",
  "embassy-net-driver-channel",
  "embassy-sync",
@@ -420,7 +420,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "768b74f36be804f7b1020938e711d91c0ab5a847cf620d3756245ae7e641e1e2"
 dependencies = [
  "cyw43",
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "embassy-rp",
  "fixed",
 ]
@@ -446,7 +446,7 @@ dependencies = [
  "proc-macro2",
  "quote",
  "strsim",
- "syn",
+ "syn 2.0.117",
 ]
 
 [[package]]
@@ -457,7 +457,7 @@ checksum = "fc34b93ccb385b40dc71c6fceac4b2ad23662c7eeb248cf10d529b7e055b6ead"
 dependencies = [
  "darling_core",
  "quote",
- "syn",
+ "syn 2.0.117",
 ]
 
 [[package]]
@@ -472,14 +472,14 @@ version = "0.3.100"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f0963443817029b2024136fc4dd07a5107eb8f977eaf18fcd1fdeb11306b64ad"
 dependencies = [
- "defmt 1.0.1",
+ "defmt 1.2.0",
 ]
 
 [[package]]
 name = "defmt"
-version = "1.0.1"
+version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "548d977b6da32fa1d1fda2876453da1e7df63ad0304c8b3dae4dbe7b96f39b78"
+checksum = "e4a0795ac740cb54d7b3775c9c17345f6aaecf884c01733b39d6017738e0e3e1"
 dependencies = [
  "bitflags 1.3.2",
  "defmt-macros",
@@ -487,22 +487,21 @@ dependencies = [
 
 [[package]]
 name = "defmt-macros"
-version = "1.0.1"
+version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3d4fc12a85bcf441cfe44344c4b72d58493178ce635338a3f3b78943aceb258e"
+checksum = "840bb056bd99c495c9188198a258ab787c79f306d864db3e6e8451442d6d8366"
 dependencies = [
  "defmt-parser",
- "proc-macro-error2",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 3.0.9",
 ]
 
 [[package]]
 name = "defmt-parser"
-version = "1.0.0"
+version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "10d60334b3b2e7c9d91ef8150abfb6fa4c1c39ebbcf4a81c2e346aad939fee3e"
+checksum = "71958f69fb2de856c5dd51ac9377e986ca1aa5919f931bf5395a807277f889a0"
 dependencies = [
  "thiserror",
 ]
@@ -514,7 +513,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "93d5a25c99d89c40f5676bec8cefe0614f17f0f40e916f98e345dae941807f9e"
 dependencies = [
  "critical-section",
- "defmt 1.0.1",
+ "defmt 1.2.0",
 ]
 
 [[package]]
@@ -545,19 +544,19 @@ dependencies = [
  "proc-macro2",
  "quote",
  "rustc_version 0.4.1",
- "syn",
+ "syn 2.0.117",
  "unicode-xid",
 ]
 
 [[package]]
 name = "device-envoy-core"
-version = "0.1.6"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b1a5da2efcf134e17d5ca11aa07bc7c771e8d81542d734420c8d89937f66ecf5"
+checksum = "857473e6fe64c38eb8ee4227a03576b96b9efdd34e335565aae247287347861f"
 dependencies = [
  "crc32fast",
  "critical-section",
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "derive_more",
  "embassy-executor",
  "embassy-futures",
@@ -565,9 +564,10 @@ dependencies = [
  "embassy-sync",
  "embassy-time",
  "embedded-graphics",
+ "embedded-hal 1.0.0",
  "heapless 0.9.2",
+ "macro-schema",
  "micromath",
- "paste",
  "portable-atomic",
  "postcard",
  "profont",
@@ -579,9 +579,9 @@ dependencies = [
 
 [[package]]
 name = "device-envoy-rp"
-version = "0.1.6"
+version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3a8b650b54e3261e9e219a96356f6612f0a7aca4cf7d4c935a33e816a85e0e8b"
+checksum = "ac8b1737712576cb78ad3597646976ee3d1056b6d3b7c0babda1bb11e8c8cbb9"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",
@@ -589,7 +589,7 @@ dependencies = [
  "cyw43",
  "cyw43-firmware",
  "cyw43-pio",
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "defmt-rtt",
  "derive_more",
  "device-envoy-core",
@@ -611,9 +611,9 @@ dependencies = [
  "hd44780-driver",
  "heapless 0.9.2",
  "itertools",
+ "macro-schema",
  "mipidsi",
  "panic-probe",
- "paste",
  "pio",
  "portable-atomic",
  "serde",
@@ -624,7 +624,7 @@ dependencies = [
 
 [[package]]
 name = "device-envoy-rp-blinky"
-version = "0.1.6"
+version = "0.2.0"
 dependencies = [
  "cortex-m-rt",
  "defmt 0.3.100",
@@ -633,7 +633,6 @@ dependencies = [
  "embassy-executor",
  "embassy-rp",
  "embassy-time",
- "heapless 0.9.2",
  "panic-probe",
 ]
 
@@ -688,7 +687,7 @@ dependencies = [
  "cordyceps",
  "cortex-m",
  "critical-section",
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "document-features",
  "embassy-executor-macros",
  "embassy-executor-timer-queue",
@@ -703,7 +702,7 @@ dependencies = [
  "darling",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.117",
 ]
 
 [[package]]
@@ -735,7 +734,7 @@ checksum = "568659fc53866d3d85c60fa33723fb751aa69e71507634fc2c19e7649432fb75"
 dependencies = [
  "cortex-m",
  "critical-section",
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "num-traits",
 ]
 
@@ -745,7 +744,7 @@ version = "0.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "347bc855bdbdf50ed9c5a1d80e8204badb0ba149b8732dde38e1e9708ed9d313"
 dependencies = [
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "document-features",
  "embassy-net-driver",
  "embassy-sync",
@@ -788,7 +787,7 @@ dependencies = [
  "cortex-m",
  "cortex-m-rt",
  "critical-section",
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "document-features",
  "embassy-embedded-hal",
  "embassy-futures",
@@ -839,7 +838,7 @@ checksum = "592b0c143ec626e821d4d90da51a2bd91d559d6c442b7c74a47d368c9e23d97a"
 dependencies = [
  "cfg-if",
  "critical-section",
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "document-features",
  "embassy-time-driver",
  "embedded-hal 0.2.7",
@@ -873,7 +872,7 @@ version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "17119855ccc2d1f7470a39756b12068454ae27a3eabb037d940b5c03d9c77b7a"
 dependencies = [
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "embedded-io-async 0.6.1",
 ]
 
@@ -959,7 +958,7 @@ version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9eb1aa714776b75c7e67e1da744b81a129b3ff919c8712b5e1b32252c1f07cc7"
 dependencies = [
- "defmt 1.0.1",
+ "defmt 1.2.0",
 ]
 
 [[package]]
@@ -977,7 +976,7 @@ version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2564b9f813c544241430e147d8bc454815ef9ac998878d30cc3055449f7fd4c0"
 dependencies = [
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "embedded-io 0.7.1",
 ]
 
@@ -1134,7 +1133,7 @@ checksum = "e835b70203e41293343137df5c0664546da5745f82ec9b84d40be8336958447b"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.117",
 ]
 
 [[package]]
@@ -1238,7 +1237,7 @@ version = "0.9.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2af2455f757db2b292a9b1768c4b70186d443bcb3b316252d6b540aec1cd89ed"
 dependencies = [
- "defmt 1.0.1",
+ "defmt 1.2.0",
  "hash32",
  "serde_core",
  "stable_deref_trait",
@@ -1369,6 +1368,36 @@ dependencies = [
 ]
 
 [[package]]
+name = "macro-schema"
+version = "0.1.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "661818f10c29920f55ec4fe6bdba4ecf2eb39ba62218e792f7b78def13eab963"
+dependencies = [
+ "macro-schema-derive",
+]
+
+[[package]]
+name = "macro-schema-core"
+version = "0.1.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2032ee2792971c07f836b7471b95eb79e8be2bb4ef9b71cfe546ce855b70db20"
+dependencies = [
+ "prettyplease",
+ "proc-macro2",
+ "quote",
+ "syn 3.0.9",
+]
+
+[[package]]
+name = "macro-schema-derive"
+version = "0.1.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fe7795d76c8de7c537bd2195a48c0403369c67c05a10456d173320456a6b1390"
+dependencies = [
+ "macro-schema-core",
+]
+
+[[package]]
 name = "managed"
 version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1469,7 +1498,7 @@ checksum = "680998035259dcfcafe653688bf2aa6d3e2dc05e98be6ab46afb089dc84f1df8"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.117",
 ]
 
 [[package]]
@@ -1491,7 +1520,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fd402d00b0fb94c5aee000029204a46884b1262e0c443f166d86d2c0747e1a1a"
 dependencies = [
  "cortex-m",
- "defmt 1.0.1",
+ "defmt 1.2.0",
 ]
 
 [[package]]
@@ -1599,7 +1628,7 @@ dependencies = [
  "proc-macro-error2",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.117",
 ]
 
 [[package]]
@@ -1634,6 +1663,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "925383efa346730478fb4838dbe9137d2a47675ad789c546d150a6e1dd4ab31c"
 
 [[package]]
+name = "prettyplease"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2bfe0f4c752e450fc2faf62654f1c134747922825d5b04ca717b8874f41a40c0"
+dependencies = [
+ "proc-macro2",
+ "syn 3.0.9",
+]
+
+[[package]]
 name = "proc-macro-error-attr2"
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1652,14 +1691,14 @@ dependencies = [
  "proc-macro-error-attr2",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.117",
 ]
 
 [[package]]
 name = "proc-macro2"
-version = "1.0.106"
+version = "1.0.107"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8fd00f0bb2e90d81d1044c2b32617f68fcb9fa3bb7640c23e9c748e53fb30934"
+checksum = "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9"
 dependencies = [
  "unicode-ident",
 ]
@@ -1679,14 +1718,14 @@ version = "0.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "869675ad2d7541aea90c6d88c81f46a7f4ea9af8cd0395d38f11a95126998a0d"
 dependencies = [
- "defmt 1.0.1",
+ "defmt 1.2.0",
 ]
 
 [[package]]
 name = "quote"
-version = "1.0.45"
+version = "1.0.47"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "41f2619966050689382d2b44f664f4bc593e129785a36d6ee376ddf37259b924"
+checksum = "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001"
 dependencies = [
  "proc-macro2",
 ]
@@ -1859,7 +1898,7 @@ checksum = "d540f220d3187173da220f885ab66608367b6574e925011a9353e4badda91d79"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.117",
 ]
 
 [[package]]
@@ -1982,6 +2021,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "syn"
+version = "3.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d78c8dee4c7bf0e14673097256fed6142ce9d3b85a408189d07482442145823b"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "unicode-ident",
+]
+
+[[package]]
 name = "term"
 version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2016,7 +2066,7 @@ checksum = "ebc4ee7f67670e9b64d05fa4253e753e016c6c95ff35b89b7941d6b856dec1d5"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.117",
 ]
 
 [[package]]
@@ -2065,7 +2115,7 @@ checksum = "7490cfa5ec963746568740651ac6781f701c9c5ea257c58e057f3ba8cf69e8da"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.117",
 ]
 
 [[package]]
@@ -2243,5 +2293,5 @@ checksum = "7e6cc098ea4d3bd6246687de65af3f920c430e236bee1e3bf2e441463f08a02f"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.117",
 ]
