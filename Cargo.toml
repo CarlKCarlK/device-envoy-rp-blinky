@@ -35,5 +35,7 @@ panic = "abort"
 
 [profile.release]
 codegen-units = 1
+# Debug info stays on the host (it is not flashed); it lets defmt log lines show their source file and line.
+debug = 2
 lto = "thin"
 panic = "abort"
