@@ -5,6 +5,8 @@
 
 Minimal blinky project using [`device-envoy-rp`](https://crates.io/crates/device-envoy-rp).
 
+[Device Envoy](https://crates.io/crates/device-envoy-rp) makes Rust applications for the Raspberry Pi Pico easier. It helps your program animate LED strips, join WiFi, play sounds, and more, without writing interrupt handlers, DMA setup, or background tasks yourself.
+
 ## What This Repo Contains
 
 `src/main.rs` is the default quick start. It blinks SOS on the built-in LED, if available. It blinks on an external LED, otherwise.
